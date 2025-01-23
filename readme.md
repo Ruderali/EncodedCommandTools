@@ -97,17 +97,13 @@ Converts a Base64 encoded command to a .ps1 file.
 Convert-EncodedCommandToPs1File -EncodedCommand "dwByAGkAdABlAC0AaABvAHMAdAAgACIAQgBpAHIAZABzAGEAcgBlAG4AdAByAGUAYQBsACIA" -Path "C:\Scripts\MyDecodedScript.ps1"
 ```
 
-## License
-
-This module is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
-
 ## Contributions
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue if you have any suggestions or bug reports.
 
 ## Contact
 
-For any questions or support, please reach out to [Your Contact Information].
+For any questions or support, please reach out to brookerowan@gmail.com.
 
 ---
 

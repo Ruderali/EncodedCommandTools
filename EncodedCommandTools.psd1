@@ -34,6 +34,10 @@
     FileList = @()
 
     PrivateData = @{
-
+        PSData = @{
+            LicenseUri = 'https://opensource.org/licenses/MIT'
+            ProjectUri = 'https://github.com/Ruderali/EncodedCommandTools'  # Replace with the URL of your repository or documentation
+            ReleaseNotes = 'Initial release of the EncodedCommandTools module.'
+        }
     }
 }
