@@ -4,7 +4,11 @@
 
 ## Installation
 
-To install **EncodedCommandTools**, download the module files and place them in your PowerShell modules directory (e.g., `C:\Program Files\WindowsPowerShell\Modules\EncodedCommandTools`).
+You can install **EncodedCommandTools** from the powershell gallery with PowerShellGet [More info](https://aka.ms/InstallModule).
+```powershell
+Install-Module -Name EncodedCommandTools
+```
+Or download the module files and place them in your PowerShell modules directory (e.g., `C:\Program Files\WindowsPowerShell\Modules\EncodedCommandTools`).
 
 ## Usage
 
