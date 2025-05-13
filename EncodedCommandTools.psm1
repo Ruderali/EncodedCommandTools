@@ -1,6 +1,7 @@
 function Convert-StringToEncodedCommand {
     param (
-        [string]$Command
+        [string]$Command,
+        [switch]$VerboseInfo
     )
 
     if (-not $Command) {
@@ -9,6 +10,16 @@ function Convert-StringToEncodedCommand {
 
     $Bytes = [System.Text.Encoding]::Unicode.GetBytes($Command)
     $EncodedCommand = [Convert]::ToBase64String($Bytes)
+
+    if ($VerboseInfo) {
+        $length = $EncodedCommand.Length
+        $EncodedCommand += "`n`n# ------------------------------"
+        $EncodedCommand += "`n# Verbose Info"
+        $EncodedCommand += "`n# Original Length : $($Command.Length)"
+        $EncodedCommand += "`n# Encoded Length  : $length"
+        $EncodedCommand += "`n# ------------------------------"
+    }
+
     return $EncodedCommand
 }
 
@@ -34,7 +45,8 @@ function Convert-EncodedCommandToString {
 
 function Convert-PS1FileToEncodedCommand {
     param (
-        [string]$Path
+        [string]$Path,
+        [switch]$VerboseInfo
     )
 
     if (-not $Path) {
@@ -52,15 +64,24 @@ function Convert-PS1FileToEncodedCommand {
     }
 
     $content = get-content -path $path -Raw
+
     $EncodedCommand = Convert-StringToEncodedCommand -Command $content
+    if ($VerboseInfo) {
+        $length = $EncodedCommand.Length
+        $EncodedCommand += "`n`n# ------------------------------"
+        $EncodedCommand += "`n# Verbose Info"
+        $EncodedCommand += "`n# Original Length : $($content.Length)"
+        $EncodedCommand += "`n# Encoded Length  : $length"
+        $EncodedCommand += "`n# ------------------------------"
+    }
     return $EncodedCommand
 }
 
 function Convert-EncodedCommandToPs1File {
-    param {
-        [string]$EncodedCommand
+    param (
+        [string]$EncodedCommand,
         [string]$Path
-    }
+    )
 
     if (-not $EncodedCommand) {
         throw "The EncodedCommand parameter cannot be null or empty."

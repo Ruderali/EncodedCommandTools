@@ -100,7 +100,12 @@ Converts a Base64 encoded command to a .ps1 file.
 ```powershell
 Convert-EncodedCommandToPs1File -EncodedCommand "dwByAGkAdABlAC0AaABvAHMAdAAgACIAQgBpAHIAZABzAGEAcgBlAG4AdAByAGUAYQBsACIA" -Path "C:\Scripts\MyDecodedScript.ps1"
 ```
-
+## Verbose Output
+The encode commands support an option -VerboseInfo switch that appends additional info about the encoded command if you're dealing with charater limits in your RMM
+**Example:**
+```powershell
+Convert-StringToEncodedCommand -Command "Get-dwByAGkAdABlAC0AaABvAHMAdAAgACIAQgBpAHIAZABzAGEAcgBlAG4AdAByAGUAYQBsACIA" -VerboseInfo
+```
 ## Contributions
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue if you have any suggestions or bug reports.
