@@ -104,7 +104,7 @@ Convert-EncodedCommandToPs1File -EncodedCommand "dwByAGkAdABlAC0AaABvAHMAdAAgACI
 The encode commands support an option -VerboseInfo switch that appends additional info about the encoded command if you're dealing with charater limits in your RMM
 **Example:**
 ```powershell
-Convert-StringToEncodedCommand -Command "Get-dwByAGkAdABlAC0AaABvAHMAdAAgACIAQgBpAHIAZABzAGEAcgBlAG4AdAByAGUAYQBsACIA" -VerboseInfo
+Convert-StringToEncodedCommand -Command "Get-AdUser" -VerboseInfo
 ```
 ## Contributions
 
