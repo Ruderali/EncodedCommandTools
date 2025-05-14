@@ -58,6 +58,8 @@ Converts a string to a Base64 encoded command.
 
 **Parameters:**
 - `Command` (string): The string command to encode.
+- `VerboseInfo`(switch): Appends character count for the encoded command.
+
 
 **Example:**
 ```powershell
@@ -82,6 +84,7 @@ Converts the content of a .ps1 file to a Base64 encoded command.
 
 **Parameters:**
 - `Path` (string): The path to the .ps1 file to encode.
+- `VerboseInfo`(switch): Appends character count for the encoded command.
 
 **Example:**
 ```powershell
@@ -116,4 +119,4 @@ For any questions or support, please reach out to brookerowan@gmail.com.
 
 ---
 
-Thank you for using **EncodedCommandTools**! We hope it makes interacting with Labtech/Automate bareable 😊 Thank you ChatGPT for making this Readme.md
+Thank you for using **EncodedCommandTools**! We hope it makes interacting with Labtech/Automate bareable 😊 Thank you ChatGPT for making this Readme.md look so nice!
